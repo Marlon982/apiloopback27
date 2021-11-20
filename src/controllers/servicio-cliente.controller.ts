@@ -1,16 +1,16 @@
+import {authenticate} from '@loopback/authentication';
 import {
-  repository,
+  repository
 } from '@loopback/repository';
 import {
-  param,
   get,
-  getModelSchemaRef,
+  getModelSchemaRef, param
 } from '@loopback/rest';
 import {
-  Servicio,
-  Cliente,
+  Cliente, Servicio
 } from '../models';
 import {ServicioRepository} from '../repositories';
+@authenticate("admin")
 
 export class ServicioClienteController {
   constructor(
