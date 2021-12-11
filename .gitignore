@@ -64,5 +64,5 @@ typings/
 *.tsbuildinfo
 
 # ignorar datos de acceso
-src/datasources/mongo.datasource.ts
+# src/datasources/mongo.datasource.ts
 
