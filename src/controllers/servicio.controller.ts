@@ -22,6 +22,7 @@ export class ServicioController {
     public servicioRepository: ServicioRepository,
   ) { }
 
+
   @post('/servicios')
   @response(200, {
     description: 'Servicio model instance',

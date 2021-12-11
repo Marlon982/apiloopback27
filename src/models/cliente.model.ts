@@ -55,7 +55,7 @@ export class Cliente extends Entity {
     type: 'string',
     required: true,
   })
-  email: string;
+  correo: string;
 
 
   constructor(data?: Partial<Cliente>) {

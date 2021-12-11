@@ -1,4 +1,4 @@
-import {Entity, model, property, belongsTo} from '@loopback/repository';
+import {belongsTo, Entity, model, property} from '@loopback/repository';
 import {Cliente} from './cliente.model';
 import {Encomienda} from './encomienda.model';
 
@@ -10,11 +10,12 @@ export class Servicio extends Entity {
     generated: true,
   })
   id?: string;
+
   @property({
-    type: 'date',
+    type: 'string',
     required: true,
   })
-  fecha: Date;
+  fecha: string;
 
   @property({
     type: 'string',
@@ -28,13 +29,13 @@ export class Servicio extends Entity {
   valor: number;
 
   @belongsTo(() => Cliente, {name: 'origenFk'})
-  origen: string;
+  origenFK: string;
 
   @belongsTo(() => Cliente, {name: 'destinoFk'})
-  destino: string;
+  destinoFK: string;
 
   @belongsTo(() => Encomienda, {name: 'encomiendaFk'})
-  encomienda: string;
+  encomiendaFK: string;
 
   constructor(data?: Partial<Servicio>) {
     super(data);
